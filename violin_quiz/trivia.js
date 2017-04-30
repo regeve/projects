@@ -17,8 +17,8 @@ var single_game_time = 40;
    w = window.innerWidth,
    h = window.innerHeight,
    stage = document.getElementById('stage'),
-   startButton = document.getElementById('startButton'),
    startButton1 = document.getElementById('startButton1'),
+   startButton2 = document.getElementById('startButton2'),
    title = document.getElementById('title'),
    questionTitle = document.getElementsByClassName("questions"),
    score = document.getElementsByClassName("score"),
@@ -43,32 +43,6 @@ var single_game_time = 40;
    //gameMusic = new Audio('http://f5361a5c08a4c03f7c6f-acbeb9602bd0a56bf9c1a6bed3d8280b.r27.cf2.rackcdn.com/math2.mp3'),
    rightAnswer = new Audio('http://f5361a5c08a4c03f7c6f-acbeb9602bd0a56bf9c1a6bed3d8280b.r27.cf2.rackcdn.com/RightSound2%single_game_time2.mp3'),
    wrongAnser = new Audio('http://f5361a5c08a4c03f7c6f-acbeb9602bd0a56bf9c1a6bed3d8280b.r27.cf2.rackcdn.com/wrongSound2.mp3'),
-   /* questions = [
-    'The acronym CSS means what?',
-    'The acronym PHP means what?',
-    'Who was the creator of Git?',
-    'Django is a web framework for what language?',
-    'Which one of these is a CSS preprocessor?',
-    'A JavaScript catch block is written how?',
-    'What is the function of CSS on a website?',
-    'What does the &#60;b&#62; tag do in HTML?',
-    'What language was GSAP originally written in?',
-    'What type of file is a SVG file?'
-   ],
-   answers = [
-    ['Cool Style Sheets', 'Crummy Style Sheets', 'Cascading Style Sheets', 'Colored Style Sheets'],
-    ['PHP: Hypertext Preprocessor', 'Personal Hypertext Preprocessor', 'PHP', 'Patronizing Hypertext Preprocessor'],
-    ['Steve Jobs', 'Linus Torvalds', 'Steven Seagal', 'Tom Preston-Werner'],
-    ['Ruby', 'JavaScript', 'PHP', 'Python'],
-    ['HTML', 'React', 'SASS', 'Lua'],
-    ['catch(Exception $e){}', 'catch(Exception e){}', 'except Exception as inst', 'catch(err){}'],
-    ['Markup web pages', 'Output data to a client', 'Used to describe look and format of markup', 'NOTHING'],
-    ['Break to a new line', 'Insert server data', 'Bold Text', 'Bullet Point'],
-    ['VBScript', 'ActionScript', 'Silverlight', 'JavaScript'],
-    ['Bitmap', 'Vector', 'Raster', 'GIF']
-   ],
-   correctAnswers = [2,0,1,3,2,3,2,2,1,1],
-   */
    
   notes = ['A2', 'A#2', 'A3', 'A#3', 'A4', 'A#4', 'A5', 'A#5', 'B2', 'B3', 'B4', 'B5', 'C3', 'C#3', 'C4', 'C#4', 'C5', 'C#5',
   'D3', 'D#3', 'D4', 'D#4', 'D5', 'D#5', 'E3', 'E4', 'E5', 'F3', 'F#3', 
@@ -107,7 +81,7 @@ var single_game_time = 40;
 
     self.windowWasResized();
     // Add click listener to start button 
-    startButton.addEventListener('click', self.startGamePlay);
+    startButton1.addEventListener('click', self.startGamePlay);
 
     // Add answer click listener
     for (var i = 0; i < buttonArray.length; i++) {
@@ -137,8 +111,8 @@ var single_game_time = 40;
     scoreSpan[0].textContent = actualScore;
     timerSpan[0].textContent = timerIndex;
 
-    startAnimation.to([startButton, startButton1, title], 1, {alpha:0});
-    startAnimation.to([startButton, startButton1, title], 0.1, {css:{display:'none'}});
+    startAnimation.to([startButton1, startButton2, title], 1, {alpha:0});
+    startAnimation.to([startButton1, startButton2, title], 0.1, {css:{display:'none'}});
     startAnimation.to([gameHeader, gameChoices], 0.1, {css:{display:'block'}, onComplete:self.fireOffGameLogic});
    };
 
