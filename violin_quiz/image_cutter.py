@@ -12,3 +12,4 @@ for note in notes:
 		cropped_img.show()
 		cropped_img.save('violin_notes1/' + note.lower() + '.png')
 		
+	

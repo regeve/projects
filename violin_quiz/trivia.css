@@ -22,7 +22,7 @@ body{
   padding: 30px;
 }
 
-#gameContainer h1 {
+#title{
   text-align: center;
   font-size: 54px;
   padding: 0;
@@ -39,9 +39,57 @@ body{
   display: none;
 }
 
+#subMenu {
+  display: none;
+}
+
 .container {
   padding:20px;
+  text-align: center;
+}  
+
+.operationButtons {	
+	padding:20px;
+	float: right;
+	background-color: #0f5722;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	line-height: 32px;
+	border-radius: 2px;
+	font-size: 26px;
+	width: 10%;
+	outline:none;
+	border:none;
+	height: 100%;
+	cursor: pointer;
+	text-align: center;
+	font-family: "Roboto Mono", Roboto, sans-serif;
+	font-weight: 400;
+	display: block;
 }
+
+.operationButtons button{
+	padding:20px;
+	float: right;
+	background-color: #0f5722;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	line-height: 32px;
+	border-radius: 2px;
+	font-size: 26px;
+	width: 10%;
+	outline:none;
+	border:none;
+	height: 100%;
+	cursor: pointer;
+	text-align: center;
+	font-family: "Roboto Mono", Roboto, sans-serif;
+	font-weight: 400;
+}
+
+.operationButtons button:hover{
+	background-color: #0f6a3c;
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.26), 0 4px 15px 0 rgba(0, 0, 0, 0.26);
+}
+
 
 #gameChoices button {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -60,12 +108,13 @@ body{
   padding: 12px;
   font-family: "Roboto Mono", Roboto, sans-serif;
   font-weight: 400;
-}
+}  
 
 #gameChoices button:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.26), 0 4px 15px 0 rgba(0, 0, 0, 0.26);
   background-color:#ff6a3c;
 }
+
 
 .left {
   float: left;
@@ -75,7 +124,7 @@ body{
 .questions {
   width: 68%;
   background-color: #000;
-  float:left;
+  float:center;
   display: block;
   margin-right: 2%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -109,7 +158,8 @@ body{
 
 .half {width: 50%;}
 
-#startButton {
+
+.buttons {
   background-color: #f4b400;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   line-height: 32px;
@@ -125,12 +175,13 @@ body{
   font-weight: 400;
 }
 
-#startButton:hover {
+.buttons:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.26), 0 4px 15px 0 rgba(0, 0, 0, 0.26);
   background-color: #ffc728;
 }
 
-#startButton1 {
+/*
+#startButton2 {
   background-color: #f4b400;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   line-height: 32px;
@@ -146,11 +197,11 @@ body{
   font-weight: 400;
 }
 
-#startButton1:hover {
+#startButton2:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.26), 0 4px 15px 0 rgba(0, 0, 0, 0.26);
   background-color: #ffc728;
 }
-
+*/
 /* Modal Window Styles */
 #modal_window{
   position: absolute;
@@ -177,7 +228,7 @@ body{
 }
 
 .modal_message span {
-  float: right;
+  float: center;
 }
 
 .modal_message div button {

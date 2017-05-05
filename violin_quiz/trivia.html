@@ -1,56 +1,77 @@
 <!DOCTYPE html>
 <html>
+	
 	<head>
 		<title>Violin quiz</title>
 		<link type='text/css' rel='stylesheet' href='trivia.css'/>
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans"/>
 	</head>
+	
 	<body>
-		 <div id="stage">
-		   <div id="container">
-			 <div id="gameContainer">
-				<div id="gameHeader">
-				  <div class="left questions">
-					<div class="container"><span></span></div>
-				  </div>
-				  <div class="left timer">
-					<div class="container">TIME: <span></span></div>
-				  </div>
-				  <div class="left score">
-					<div class="container">SCORE: <span></span></div>
-				  </div>
+		<div id="stage">
+			<div id="container">
+				<div id="gameContainer">
+					<div id="gameHeader">
+						<div class="left questions">
+							<div class="container"><span></span></div>
+						</div>
+						<div class="left timer">
+							<div class="container">TIME: <span></span></div>
+						</div>
+						<div class="left score">
+							<div class="container">SCORE: <span></span></div>
+						</div>
+					</div>
+					<div id="gameChoices">
+						<div class="row">
+							<div class="left half">
+								<div class="container"><button id="buttonOne" data-index="0"></button></div>
+							</div>
+							<div class="left half">
+								<div class="container"><button id="buttonTwo" data-index="1"></button></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="left half">
+								<div class="container"><button id="buttonThree" data-index="2"></button></div>
+							</div>
+							<div class="left half">
+								<div class="container"><button id="buttonFour" data-index="3"></button></div>
+							</div>
+						</div>
+						<div class="operationButtons">
+							<button id="exitButton" class="operationButtons">Exit</button>
+						</div>
+					</div>
 				</div>
-				<div id="gameChoices">
-				  <div class="row">
-					<div class="left half">
-					  <div class="container"><button id="buttonOne" data-index="0"></button></div>
-					</div>
-					<div class="left half">
-					  <div class="container"><button id="buttonTwo" data-index="1"></button></div>
-					</div>
-				  </div>
-				  <div class="row">
-					<div class="left half">
-					  <div class="container"><button id="buttonThree" data-index="2"></button></div>
-					</div>
-					<div class="left half">
-					  <div class="container"><button id="buttonFour" data-index="3"></button></div>
-					</div>
-				  </div>
-				</div>
-				
+			</div>
+			
+			<div id='mainMenu'>
 				<h1 id="title">Violin Center</h1>
-			 </div>
-			 <button id="startButton">Ear Training</button>
-			 <button id="startButton1">Notes Training</button>
-		   </div>
-		 </div>
-		 <div id="modal_window">
-		  <div class="modal_message">
-			<p></p>
-			<p></p>
-		 </div>
-		 <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
-		 <script type='text/javascript' src='trivia.js'></script>
+					<button id="startButton1" class="buttons">Ear Training</button>
+					<button id="startButton2" class="buttons">Notes Training</button>
+			</div>
+			
+			<div id="subMenu">
+				<h1 id="title">Answers Form</h1>
+				<button id="subMenuButton1" class="buttons">Do Re Mi</button>
+				<button id="subMenuButton2" class="buttons">ABC</button>
+				<button id="subMenuButton3" class="buttons">ABC Extended</button>
+				<p></p><p></p><p></p>
+				<button id="subMenuBackButton" class="operationButtons">Back</button>
+			</div>
+		</div>
+				
+		<div id="modal_window">
+			<div class="modal_message">
+				<p></p>
+				<p></p>
+			</div>
+		</div>
+			
+		
+		<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
+		<script type='text/javascript' src='trivia.js'></script>
+	
 	</body>
  </html>
